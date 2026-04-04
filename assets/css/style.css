@@ -1,14 +1,24 @@
-.menu-dropdown {
-    display: none;
+.menu-dropdown,
+.information-dropdown {
+    display: none;           /* hidden by default */
     position: absolute;
     background: #333;
+    min-width: 180px;
+    border-radius: 5px;
+    z-index: 100;
 }
 
-.menu-dropdown a {
+.menu-dropdown a,
+.information-dropdown a {
     display: block;
     color: white;
     padding: 10px;
     text-decoration: none;
+}
+
+.menu-dropdown a:hover,
+.information-dropdown a:hover {
+    background: #555;
 }
 
 .show {
@@ -16,11 +26,12 @@
 }
 
 .navbar {
-    position: relative;
+    position: relative; /* required for absolute dropdown positioning */
 }
 
-#menu-dropdown {
-    position: absolute;
+#menu-dropdown,
+#information-dropdown {
     top: 100%;
     left: 0;
+    margin-top: 5px; /* optional spacing below the link */
 }

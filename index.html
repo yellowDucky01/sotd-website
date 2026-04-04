@@ -9,21 +9,35 @@
     <body>
         <div class="container">
             <header>
-                <!-- <img src="assets/images/46.jpg" alt="SOTD Logo" id="stod" /> -->
-
-                <div class="navbar">
+                <div class="server-status"></div>
+                <div class="bottom-navbar">
                     <div class="main-menu">
                         <a
                             href="#"
-                            onclick="toggleMenu(event)"
+                            onclick="toggleMenu(event, 'menu-dropdown')"
                             class="menu-link"
                             >MAIN MENU</a
                         >
                     </div>
 
-                    <div id="menu-dropdown">
+                    <div id="menu-dropdown" class="menu-dropdown">
                         <a href="#">HOME</a>
                         <a href="#">SUPPORT TICKET</a>
+                    </div>
+                    <div class="information-menu">
+                        <a
+                            href="#"
+                            onclick="toggleInfo(event, 'information-dropdown')"
+                            class="menu-link"
+                            >INFORMATION</a
+                        >
+                    </div>
+
+                    <div id="information-dropdown" class="information-dropdown">
+                        <a href="#">SERVER INFO</a>
+                        <a href="#">STARTER GUIDE</a>
+                        <a href="#">SERVER RULES</a>
+                        <a href="#">WIKI</a>
                     </div>
                 </div>
             </header>
