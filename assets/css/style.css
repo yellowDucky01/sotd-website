@@ -1,168 +1,26 @@
-
-/* FONT STYLES */
-.jost-unique {
-    font-family: "Jost", sans-serif;
-    font-style: normal;
-}
-
-.meow-script-regular {
-    font-family: "Meow Script", cursive;
-    font-weight: 400;
-    font-style: normal;
-}
-
-.delius-regular {
-    font-family: "Delius", cursive;
-    font-weight: 400;
-    font-style: normal;
-}
-
-/* GLOBAL STYLING */
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    font-family: "Jost", sans-serif;
-}
-
-html, body {
-    height: 100%;
-}
-
-body {
-    background-color: rgb(17,17,17);
-}
-
-/* MAIN LAYOUT */
-.main {
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* FORM */
-
-.form {
-    background: rgb(17,17,17);
-    border: 1px solid white;
-    padding: 40px;
-    border-radius: 10px;
-    width: 370px;
-    text-align: center;
-}
-
-
-/*           LOGO             */
-.sotd-logo img {
-    max-width: 40%;
-    margin-bottom: 20px;
-}
-
-
-/*         HEADINGS           */
-.form h3 {
-    color: white;
-    font-size: 24px;
-    margin-bottom: 10px;
-}
-
-.form h4 {
-    color: rgb(255, 255, 255);
-    font-size: 14px;
-    margin-bottom: 20px;
-}
-
-
-/*        FORM BUTTONS        */
-
-.form-buttons button:hover {
-    opacity: 0.9;
-}
-
-/* Discord Login Button*/
-#discord-login {
-    width: 100%;
-    height: 30%;
-    background-color: #5865F2;
-    padding: 5px;
-}
-
-.fa-discord {
-    color: rgb(255, 255, 255);
-    font-size: 3.5em;
-    margin-bottom: 2%;
-}
-
-#discord-login p {
-    color: white;
-    font-size: 1.3em;
-}
-
-/* Login Button */
-#login-btn {
-    width: 100%;
-    height: 45px;
-    background-color: rgb(74, 184, 74);
-    color: white
-}
-/*         FORM INPUTS        */
-.form input[type="text"],
-.form input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border-radius: 5px;
-    border: none;
-}
-
-/* -------------------------- */
-/*       PASSWORD TOGGLE      */
-.password-container {
-    position: relative;
-    width: 100%;
-}
-
-.password-container input {
-    width: 100%;
-    padding-right: 40px;
-}
-
-.password-container .fa-eye {
+.menu-dropdown {
+    display: none;
     position: absolute;
-    top: 50%;
-    right: 10px;
-    transform: translateY(-50%);
-    cursor: pointer;
-    color: #ccc;
+    background: #333;
 }
 
-/* -------------------------- */
-/*      "Don't have account"  */
-.dont-have-an-account p {
-    color: #ccc;
-    font-size: 14px;
-    margin-top: 10px;
-}
-
-.dont-have-an-account a {
-    color: #5865F2;
+.menu-dropdown a {
+    display: block;
+    color: white;
+    padding: 10px;
     text-decoration: none;
 }
 
-.dont-have-an-account a:hover {
-    text-decoration: underline;
+.show {
+    display: block;
 }
 
-/* -------------------------- */
-/*       RESPONSIVE UI        */
-@media (max-width: 400px) {
-    .form {
-        width: 90%;
-        padding: 30px 20px;
-    }
+.navbar {
+    position: relative;
+}
 
-    .sotd-logo img {
-        max-width: 50%;
-    }
+#menu-dropdown {
+    position: absolute;
+    top: 100%;
+    left: 0;
 }
