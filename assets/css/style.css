@@ -1,37 +1,153 @@
-.menu-dropdown,
-.information-dropdown {
-    display: none;           /* hidden by default */
-    position: absolute;
-    background: #333;
-    min-width: 180px;
-    border-radius: 5px;
-    z-index: 100;
+/* Font Styling*/
+.creepster-regular {
+  font-family: "Creepster", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }
 
-.menu-dropdown a,
-.information-dropdown a {
-    display: block;
-    color: white;
-    padding: 10px;
+
+header {
+    width: 100%;
+    background: linear-gradient(rgb(30, 30, 30), rgb(21, 21, 21));
+
+}
+.navbar {
+    width: 70%;
+    color: #fff;
+    margin: auto;
+    font-family: Arial, sans-serif;
+}
+
+/* TOP NAVBAR */
+.top-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.top-left a {
     text-decoration: none;
 }
 
-.menu-dropdown a:hover,
-.information-dropdown a:hover {
-    background: #555;
+.top-left a span {
+    font-family: "Creepster", system-ui;
+    font-size: 3em;
+    font-weight: bold;
 }
 
-.show {
+.top-left a span:first-child {
+    color: #ffffff;
+}
+
+.top-left a span:last-child {
+    color: #ff0000;
+}
+
+.top-right .server-info {
+    display: flex;
+    gap: 30px;
+}
+
+.top-right .info-block p:first-child {
+    font-size: 1em;
+    color: rgb(222,57,40);
+    margin: 0;
+    margin-top: 25%;
+}
+
+.top-right .info-block p:last-child {
+    font-size: 1em;
+    font-weight: bold;
+    margin: 0;
+}
+
+.top-right .players {
+    border: 1px;
+    background: rgb(15, 15, 15);
+    border-radius: 20px;
+    border-style: solid;
+    padding: 10px;
+}
+
+.top-right .players p {
+    font-size: 0.8em
+}
+
+/* BOTTOM NAVBAR */
+.bottom-navbar {
+    width: 100%;
+    background-color: #222;
+    padding: 5px 20px;
+}
+
+.menu {
+    display: flex;
+    gap: 20px;
+}
+
+.menu-item {
+    position: relative;
+}
+
+.menu-button {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.menu-button:hover {
+    color: #ffd700;
+}
+
+/* DROPDOWN */
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    z-index: 100;
+    min-width: 150px;
+}
+
+.dropdown a {
+    display: block;
+    padding: 10px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.dropdown a:hover {
+    background-color: #444;
+}
+
+.dropdown.show {
     display: block;
 }
 
-.navbar {
-    position: relative; /* required for absolute dropdown positioning */
-}
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .top-navbar, .bottom-navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
 
-#menu-dropdown,
-#information-dropdown {
-    top: 100%;
-    left: 0;
-    margin-top: 5px; /* optional spacing below the link */
+    .top-right .server-info {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .menu-item {
+        width: 100%;
+    }
 }

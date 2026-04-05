@@ -1,9 +1,8 @@
 function toggleDropdown(e, id) {
     e.preventDefault();
 
-    // Close all other dropdowns
     const dropdowns = document.querySelectorAll(
-        ".menu-dropdown, .information-dropdown",
+        ".menu-dropdown, .information-dropdown, .donations-dropdown",
     );
     dropdowns.forEach((dd) => {
         if (dd.id !== id) {
@@ -11,15 +10,14 @@ function toggleDropdown(e, id) {
         }
     });
 
-    // Toggle the clicked dropdown
     document.getElementById(id).classList.toggle("show");
 }
 
 // Close dropdowns when clicking outside
-window.onclick = function (e) {
+window.onclick = function(e) {
     if (!e.target.matches(".menu-link")) {
         const dropdowns = document.querySelectorAll(
-            ".menu-dropdown, .information-dropdown",
+            ".menu-dropdown, .information-dropdown, .donations-dropdown",
         );
         dropdowns.forEach((dd) => dd.classList.remove("show"));
     }

@@ -4,44 +4,90 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="assets/css/style.css" />
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Creepster&family=Delius&family=Meow+Script&display=swap");
+        </style>
         <title>SOTD</title>
     </head>
     <body>
-        <div class="container">
-            <header>
-                <div class="server-status"></div>
-                <div class="bottom-navbar">
-                    <div class="main-menu">
-                        <a
-                            href="#"
-                            onclick="toggleMenu(event, 'menu-dropdown')"
-                            class="menu-link"
-                            >MAIN MENU</a
-                        >
+        <header>
+            <div class="navbar">
+                <!-- TOP NAVBAR -->
+                <div class="top-navbar">
+                    <div class="top-left">
+                        <a href="#" class="SOTD">
+                            <span>State of the </span>
+                            <span color="red">Dead</span>
+                        </a>
                     </div>
-
-                    <div id="menu-dropdown" class="menu-dropdown">
-                        <a href="#">HOME</a>
-                        <a href="#">SUPPORT TICKET</a>
-                    </div>
-                    <div class="information-menu">
-                        <a
-                            href="#"
-                            onclick="toggleInfo(event, 'information-dropdown')"
-                            class="menu-link"
-                            >INFORMATION</a
-                        >
-                    </div>
-
-                    <div id="information-dropdown" class="information-dropdown">
-                        <a href="#">SERVER INFO</a>
-                        <a href="#">STARTER GUIDE</a>
-                        <a href="#">SERVER RULES</a>
-                        <a href="#">WIKI</a>
+                    <div class="top-right">
+                        <div class="server-info">
+                            <div class="info-block">
+                                <p>Server Time</p>
+                                <p>XX:XX AM</p>
+                            </div>
+                            <div class="info-block">
+                                <p>Server Status</p>
+                                <p>ONLINE</p>
+                            </div>
+                            <div class="players">
+                                <p>Online Players XXX</p>
+                                <p>Online Peak XXX</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </header>
-        </div>
+
+                <!-- BOTTOM NAVBAR -->
+                <div class="bottom-navbar">
+                    <nav class="menu">
+                        <div class="menu-item">
+                            <button
+                                onclick="toggleDropdown(event, 'main-dropdown')"
+                                class="menu-button"
+                            >
+                                MAIN MENU
+                            </button>
+                            <div id="main-dropdown" class="dropdown">
+                                <a href="#">HOME</a>
+                                <a href="#">SUPPORT TICKET</a>
+                            </div>
+                        </div>
+
+                        <div class="menu-item">
+                            <button
+                                onclick="toggleDropdown(event, 'info-dropdown')"
+                                class="menu-button"
+                            >
+                                INFORMATION
+                            </button>
+                            <div id="info-dropdown" class="dropdown">
+                                <a href="#">SERVER INFO</a>
+                                <a href="#">STARTER GUIDE</a>
+                                <a href="#">SERVER RULES</a>
+                                <a href="#">WIKI</a>
+                            </div>
+                        </div>
+
+                        <div class="menu-item">
+                            <button
+                                onclick="
+                                    toggleDropdown(event, 'donate-dropdown')
+                                "
+                                class="menu-button"
+                            >
+                                DONATIONS
+                            </button>
+                            <div id="donate-dropdown" class="dropdown">
+                                <a href="#">DONATE</a>
+                                <a href="#">DONATION PERKS</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
         <script src="assets/js/main.js"></script>
     </body>
 </html>
