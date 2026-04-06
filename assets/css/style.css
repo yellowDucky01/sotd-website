@@ -1,21 +1,27 @@
-/* Font Styling*/
-.creepster-regular {
-  font-family: "Creepster", system-ui;
-  font-weight: 400;
-  font-style: normal;
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+/* BODY */
+body {
+    background-color: #111;
+    font-family: Arial, sans-serif;
+}
 
+/* HEADER */
 header {
     width: 100%;
     background: linear-gradient(rgb(30, 30, 30), rgb(21, 21, 21));
-
 }
+
+/* MAIN CONTAINER */
 .navbar {
     width: 70%;
-    color: #fff;
     margin: auto;
-    font-family: Arial, sans-serif;
+    color: #fff;
 }
 
 /* TOP NAVBAR */
@@ -23,80 +29,73 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 15px 0;
 }
 
+/* LOGO */
 .top-left a {
     text-decoration: none;
 }
 
-.top-left a span {
-    font-family: "Creepster", system-ui;
+.top-left span {
+    font-family: "Creepster", cursive;
     font-size: 3em;
     font-weight: bold;
 }
 
-.top-left a span:first-child {
-    color: #ffffff;
+.top-left span:first-child {
+    color: #fff;
 }
 
-.top-left a span:last-child {
-    color: #ff0000;
+.top-left span:last-child {
+    color: red;
 }
 
-.top-right .server-info {
+/* SERVER INFO */
+.server-info {
     display: flex;
-    gap: 30px;
+    align-items: center;
+    gap: 25px;
 }
 
-.top-right .info-block p:first-child {
-    font-size: 1em;
-    color: rgb(222,57,40);
-    margin: 0;
-    margin-top: 25%;
+.info-block p:first-child {
+    color: rgb(222, 57, 40);
+    font-size: 0.9em;
 }
 
-.top-right .info-block p:last-child {
-    font-size: 1em;
+.info-block p:last-child {
     font-weight: bold;
-    margin: 0;
 }
 
-.top-right .players {
-    border: 1px;
-    background: rgb(15, 15, 15);
-    border-radius: 20px;
-    border-style: solid;
-    padding: 10px;
-}
-
-.top-right .players p {
-    font-size: 0.8em
+/* PLAYERS BOX */
+.players {
+    border: 1px solid #fff;
+    background: #0f0f0f;
+    border-radius: 15px;
+    padding: 8px 12px;
+    font-size: 0.8em;
 }
 
 /* BOTTOM NAVBAR */
 .bottom-navbar {
     width: 100%;
-    background-color: #222;
-    padding: 5px 20px;
+    background-color: #3a3a3a;
+    padding: 8px 0;
 }
 
+/* MENU */
 .menu {
     display: flex;
-    gap: 20px;
+    gap: 25px;
 }
 
-.menu-item {
-    position: relative;
-}
-
+/* BUTTONS */
 .menu-button {
     background: none;
     border: none;
     color: #fff;
-    cursor: pointer;
-    font-size: 14px;
     font-weight: bold;
+    cursor: pointer;
 }
 
 .menu-button:hover {
@@ -104,6 +103,10 @@ header {
 }
 
 /* DROPDOWN */
+.menu-item {
+    position: relative;
+}
+
 .dropdown {
     display: none;
     position: absolute;
@@ -130,24 +133,45 @@ header {
     display: block;
 }
 
+/* CONTENT AREA */
+.content {
+    min-height: 100vh;
+    background-color: #111;
+}
+
 /* RESPONSIVE */
 @media (max-width: 768px) {
-    .top-navbar, .bottom-navbar {
+    .top-navbar {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .top-right .server-info {
+    .server-info {
         flex-direction: column;
-        gap: 10px;
+        align-items: flex-start;
     }
 
     .menu {
         flex-direction: column;
-        width: 100%;
     }
+}
 
-    .menu-item {
-        width: 100%;
-    }
+/* SHOWCASE IMAGE */
+.showcase-image img {
+    width: 100%;
+    height: 100vh;
+}
+
+/* DISCORD SHOWCASE */
+.showcase {
+    position: relative;
+    text-align: center;
+    height: auto;
+}
+
+.showcase-discord-server-text {
+    position: absolute;
+    top: -20%;
+    color: white;
+    padding: 500px;
 }

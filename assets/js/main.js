@@ -13,7 +13,6 @@ function toggleDropdown(e, id) {
     document.getElementById(id).classList.toggle("show");
 }
 
-// Close dropdowns when clicking outside
 window.onclick = function(e) {
     if (!e.target.matches(".menu-link")) {
         const dropdowns = document.querySelectorAll(
