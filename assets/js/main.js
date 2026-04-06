@@ -1,23 +1,17 @@
-function toggleDropdown(e, id) {
-    e.preventDefault();
+function toggleDropdown(event, id) {
+    event.stopPropagation();
+    const dropdowns = document.querySelectorAll(".dropdown");
+    const target = document.getElementById(id);
 
-    const dropdowns = document.querySelectorAll(
-        ".menu-dropdown, .information-dropdown, .donations-dropdown",
-    );
-    dropdowns.forEach((dd) => {
-        if (dd.id !== id) {
-            dd.classList.remove("show");
-        }
+    dropdowns.forEach((d) => {
+        if (d !== target) d.style.display = "none";
     });
 
-    document.getElementById(id).classList.toggle("show");
+    target.style.display = target.style.display === "block" ? "none" : "block";
 }
 
-window.onclick = function(e) {
-    if (!e.target.matches(".menu-link")) {
-        const dropdowns = document.querySelectorAll(
-            ".menu-dropdown, .information-dropdown, .donations-dropdown",
-        );
-        dropdowns.forEach((dd) => dd.classList.remove("show"));
-    }
+window.onclick = function () {
+    document
+        .querySelectorAll(".dropdown")
+        .forEach((d) => (d.style.display = "none"));
 };

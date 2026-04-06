@@ -1,205 +1,140 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>State of the Dead</title>
+    <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
 
-        <!-- Google Font -->
-        <link
-            href="https://fonts.googleapis.com/css2?family=Creepster&display=swap"
-            rel="stylesheet"
-        />
+<body>
+    <header>
+        <div class="navbar">
+            <div class="top-navbar">
+                <div class="top-left">
+                    <a href="#">
+                        <span>STATE OF THE </span><span id="dead">DEAD</span>
+                    </a>
+                </div>
 
-        <link rel="stylesheet" href="assets/css/style.css" />
-        <title>SOTD</title>
-    </head>
+                <div class="top-right">
+                    <div class="server-info">
+                        <div class="info-block">
+                            <p>Server Time</p>
+                            <p>10:45 AM</p>
+                        </div>
+                        <div class="info-block">
+                            <p>Server Status</p>
+                            <p style="color: #00ff00;">ONLINE</p>
+                        </div>
+                        <div class="players">
+                            <p>Online Players <strong>452</strong></p>
+                            <p>Online Peak <strong>890</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
-    <body>
-        <header>
-            <!-- TOP NAVBAR -->
+        <div class="bottom-navbar">
             <div class="navbar">
-                <div class="top-navbar">
-                    <div class="top-left">
-                        <a href="#">
-                            <span>State of the </span>
-                            <span>Dead</span>
-                        </a>
+                <nav class="menu">
+                    <div class="menu-item">
+                        <button onclick="toggleDropdown(event, 'main')" class="menu-button">MAIN MENU</button>
+                        <div id="main" class="dropdown">
+                            <a href="#">HOME</a>
+                            <a href="#">SUPPORT TICKET</a>
+                        </div>
                     </div>
 
-                    <div class="top-right">
-                        <div class="server-info">
-                            <div class="info-block">
-                                <p>Server Time</p>
-                                <p>XX:XX AM</p>
-                            </div>
-
-                            <div class="info-block">
-                                <p>Server Status</p>
-                                <p>ONLINE</p>
-                            </div>
-
-                            <div class="players">
-                                <p>Online Players XXX</p>
-                                <p>Online Peak XXX</p>
-                            </div>
+                    <div class="menu-item">
+                        <button onclick="toggleDropdown(event, 'info')" class="menu-button">INFORMATION</button>
+                        <div id="info" class="dropdown">
+                            <a href="#">SERVER INFO</a>
+                            <a href="#">STARTER GUIDE</a>
+                            <a href="#">SERVER RULES</a>
+                            <a href="#">WIKI</a>
                         </div>
+                    </div>
+
+                    <div class="menu-item">
+                        <button onclick="toggleDropdown(event, 'donate')" class="menu-button">DONATIONS</button>
+                        <div id="donate" class="dropdown">
+                            <a href="#">DONATE</a>
+                            <a href="#">DONATION PERKS</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="showcase">
+            <div class="showcase-image">
+                <img src="assets/images/showcase-pz.png" alt="Showcase" />
+            </div>
+            <div class="showcase-discord-server-text">
+                <div class="discord-server-promotion">
+                    <h1>Looking for your next <span id="span-apocalyptic">post-apocalyptic</span> adventure?</h1>
+                    <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto velit perferendis quas? Veritatis perferendis tempore aliquam suscipit voluptas atque mollitia cum, ab ipsum voluptatum possimus molestiae eum, dolor, dignissimos recusandae.</h3>
+                    <div id="discord-btn">
+                        <button>JOIN OUR DISCORD</button>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <!-- BOTTOM NAVBAR -->
-            <div class="bottom-navbar">
-                <div class="navbar">
-                    <nav class="menu">
-                        <div class="menu-item">
-                            <button
-                                onclick="toggleDropdown(event, 'main')"
-                                class="menu-button"
-                            >
-                                MAIN MENU
-                            </button>
-                            <div id="main" class="dropdown">
-                                <a href="#">HOME</a>
-                                <a href="#">SUPPORT TICKET</a>
-                            </div>
-                        </div>
-
-                        <div class="menu-item">
-                            <button
-                                onclick="toggleDropdown(event, 'info')"
-                                class="menu-button"
-                            >
-                                INFORMATION
-                            </button>
-                            <div id="info" class="dropdown">
-                                <a href="#">SERVER INFO</a>
-                                <a href="#">STARTER GUIDE</a>
-                                <a href="#">SERVER RULES</a>
-                                <a href="#">WIKI</a>
-                            </div>
-                        </div>
-
-                        <div class="menu-item">
-                            <button
-                                onclick="toggleDropdown(event, 'donate')"
-                                class="menu-button"
-                            >
-                                DONATIONS
-                            </button>
-                            <div id="donate" class="dropdown">
-                                <a href="#">DONATE</a>
-                                <a href="#">DONATION PERKS</a>
-                            </div>
-                        </div>
-                    </nav>
+        <section class="announcements">
+            <div id="announcements-title">
+                <h2 class="title">ANNOUNCEMENTS</h2>
+            </div>
+            
+            <div class="slider">
+                <div class="cards">
+                    <img src="assets/images/46.jpg" alt="News" />
+                    <div class="card-body">
+                        <strong>Lorem ipsum dolor sit.</strong>
+                        <p style="font-size: 0.8rem; color: #888;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio, voluptates.</p>
+                    </div>
+                </div>
+                <div class="cards">
+                    <img src="assets/images/46.jpg" alt="News" />
+                    <div class="card-body">
+                        <strong>Lorem, ipsum dolor.</strong>
+                        <p style="font-size: 0.8rem; color: #888;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut, soluta.</p>
+                    </div>
+                </div>
+                <div class="cards">
+                    <img src="assets/images/46.jpg" alt="News" />
+                    <div class="card-body">
+                        <strong>Lorem ipsum dolor sit amet consectetur.</strong>
+                        <p style="font-size: 0.8rem; color: #888;">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia, dolorem!</p>
+                    </div>
                 </div>
             </div>
-        </header>
+        </section>
 
-        <main>
-            <div class="showcase">
-                <div class="showcase-image">
-                    <img src="assets/images/showcase-pz.png" alt="" />
-                </div>
-                <div class="showcase-discord-server-text">
-                    <div class="discord-server-promotion">
-                        <div class="discord-server-h1">
-                            <h1>
-                                Looking for your next
-                                <span id="span-apocalyptic"
-                                    >post-apocalyptic</span
-                                >
-                                adventure?
-                            </h1>
-                        </div>
-                        <div class="discord-server-h3">
-                            <h3>
-                                Lorem ipsum dolor sit amet consectetur
-                                adipisicing elit. Dolor, ut repellendus
-                                voluptatum sit labore cum saepe deleniti optio
-                                odio quod provident ratione dolores debitis id
-                                tempora consequuntur vero aut maxime!
-                            </h3>
-                        </div>
-                        <div id="discord-btn">
-                            <button>Join our Discord</button>
-                        </div>
-                    </div>
-                </div>
+        <div class="what-we-offer">
+            <h1 style="font-family: 'Creepster'; font-size: 2.5rem; color: var(--gold-accent);">WHAT MAKES US DIFFERENT</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nihil minima dolorem quod voluptates consequatur dignissimos error, maxime ipsum quis sequi corrupti facere tenetur quae. Nisi eius nesciunt architecto officiis autem.</p>
+        </div>
 
-                <section class="announcements">
-                    <h2 class="title">ANNOUNCEMENTS</h2>
-
-                    <div class="slider">
-                        <button class="nav prev"><</button>
-
-                        <div class="cards">
-                            <img src="assets/images/46.jpg" alt="" />
-                            <div class="card-body">
-                                <div class="top"></div>
-                                <div class="bottom"></div>
-                            </div>
-                        </div>
-
-                        <div class="cards">
-                            <img src="assets/images/46.jpg" alt="" />
-                            <div class="card-body">
-                                <div class="top"></div>
-                                <div class="bottom"></div>
-                            </div>
-                        </div>
-
-                        <div class="cards">
-                            <img src="assets/images/46.jpg" alt="" />
-                            <div class="card-body">
-                                <div class="top"></div>
-                                <div class="bottom"></div>
-                            </div>
-                        </div>
-
-                        <div class="cards">
-                            <img src="assets/images/46.jpg" alt="" />
-                            <div class="card-body">
-                                <div class="top"></div>
-                                <div class="bottom"></div>
-                            </div>
-                        </div>
-
-                        <button class="nav next">></button>
-                    </div>
-                </section>
-
-                <div class="what-we-offer">
-                    <h1>WHAT MAKES US DIFFERENT</h1>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Impedit, quae voluptates asperiores nisi dolore
-                        aspernatur accusamus sint aliquid deserunt, deleniti ut
-                        sunt consectetur tempore perspiciatis? Impedit placeat
-                        non distinctio atque.
-                    </p>
-                    <div class="what-we-offer-btn">
-                        <button>Information</button>
-                        <button>Features</button>
-                    </div>
-                </div>
-
-                <div class="leaderboard">
-                    <div class="top-factions">
-                        <h3>TOP FACTIONS</h3>
-                    </div>
-                    <div class="top-players">
-                        <h3>30 DAY TOP PLAYERS</h3>
-                    </div>
-                </div>
-
-                
+        <div class="leaderboard">
+            <div class="top-factions">
+                <h3>TOP FACTIONS</h3>
+                <p>1. The Reapers - 15,200pts</p>
+                <p>2. Last Hope - 12,800pts</p>
             </div>
-        </main>
+            <div class="top-players">
+                <h3>30 DAY TOP PLAYERS</h3>
+                <p>1. Survivor_X - 2,500 Kills</p>
+                <p>2. DeadManWalking - 1,850 Kills</p>
+            </div>
+        </div>
+    </main>
 
-        <!-- MAIN JS -->
-        <section class="content"></section>
-
-        <script src="assets/js/main.js"></script>
-    </body>
+    <script src="assets/js/main.js"></script>
+</body>
 </html>
