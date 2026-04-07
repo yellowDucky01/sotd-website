@@ -36,6 +36,8 @@ header {
     background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent);
 }
 
+ 
+
 .navbar {
     max-width: 1200px;
     margin: 0 auto;
@@ -49,8 +51,8 @@ header {
 }
 
 .top-left a {
-    font-family: "Creepster", cursive;
-    font-size: 2.5rem;
+    font-size: 2rem;
+    font-weight: bolder;
     color: white;
     text-shadow:
         0 0 10px rgba(197, 89, 89, 0.5),
@@ -176,8 +178,7 @@ main {
 }
 
 .discord-server-promotion h1 {
-    font-family: "Creepster";
-    font-size: 2.8rem;
+    font-size: 2.6rem;
     margin-bottom: 20px;
     line-height: 1.1;
 }
@@ -226,8 +227,6 @@ main {
 }
 
 .title {
-    font-family: 'Creepster', cursive;
-    font-size: 3rem;
     color: var(--blood-red);
     text-shadow: 2px 2px 5px #000;
     margin: 0;
