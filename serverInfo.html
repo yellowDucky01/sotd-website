@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>State of the Dead</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Creepster&family=Roboto:wght@400;700&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="assets/css/serverInfo.css" />
+    </head>
+
+    <body>
+        <header>
+            <div class="navbar">
+                <div class="top-navbar">
+                    <div class="top-left">
+                        <a href="#">
+                            <span>STATE OF THE </span
+                            ><span id="dead">DEAD</span>
+                        </a>
+                    </div>
+
+                    <div class="top-right">
+                        <div class="server-info">
+                            <div class="info-block">
+                                <p>Server Time</p>
+                                <p>10:45 AM</p>
+                            </div>
+                            <div class="info-block">
+                                <p>Server Status</p>
+                                <p style="color: #00ff00">ONLINE</p>
+                            </div>
+                            <div class="players">
+                                <p>Online Players <strong>452</strong></p>
+                                <p>Online Peak <strong>890</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bottom-navbar">
+                <div class="navbar">
+                    <nav class="menu">
+                        <div class="menu-item">
+                            <button
+                                onclick="toggleDropdown(event, 'main')"
+                                class="menu-button"
+                            >
+                                MAIN MENU
+                            </button>
+                            <div id="main" class="dropdown">
+                                <a href="index.html">HOME</a>
+                                <a href="supportTIcket.html">SUPPORT TICKET</a>
+                            </div>
+                        </div>
+
+                        <div class="menu-item">
+                            <button
+                                onclick="toggleDropdown(event, 'info')"
+                                class="menu-button"
+                            >
+                                INFORMATION
+                            </button>
+                            <div id="info" class="dropdown">
+                                <a href="serverInfo.html">SERVER INFO</a>
+                                <a href="starterGuide.html">STARTER GUIDE</a>
+                                <a href="serverRules.html">SERVER RULES</a>
+                                <a href="wiki.html">WIKI</a>
+                            </div>
+                        </div>
+
+                        <div class="menu-item">
+                            <button
+                                onclick="toggleDropdown(event, 'donate')"
+                                class="menu-button"
+                            >
+                                DONATIONS
+                            </button>
+                            <div id="donate" class="dropdown">
+                                <a href="donate.html">DONATE</a>
+                                <a href="donationPerks.html">DONATION PERKS</a>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
