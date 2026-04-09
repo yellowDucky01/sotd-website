@@ -1,6 +1,6 @@
 /* --- CSS VARIABLES --- */
 :root {
-    --bg-dark: #0a0a0a;
+    --bg-dark: #1d1d1d;
     --panel-bg: rgba(15, 15, 15, 0.9);
     --blood-hover: #ff5757;
     --blood-red: #8b0000;
@@ -79,7 +79,7 @@ header {
 }
 
 .bottom-navbar {
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(106, 0, 0, 0.8);
     border-top: 1px solid #444;
     border-bottom: 2px solid var(--blood-red);
     position: sticky;
@@ -224,6 +224,7 @@ main {
     max-width: 400px;
     margin-left: auto;
     margin-right: auto;
+    background-color: black;
 }
 
 .title {
