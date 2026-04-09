@@ -139,8 +139,11 @@ header {
 
 /* FOOTER */
 .footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 25px;
     text-align: center;
-    padding: 20px;
     background-color: #111;
-    margin-top: 40px;
 }
