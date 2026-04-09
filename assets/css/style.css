@@ -294,3 +294,10 @@ main {
     padding: 40px;
     border: 1px dashed var(--blood-red);
 }
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    margin-top: 40px;
+}
