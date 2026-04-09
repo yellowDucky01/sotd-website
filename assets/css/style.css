@@ -1,3 +1,13 @@
+/* --- CSS VARIABLES --- */
+:root {
+    --bg-dark: #1d1d1d;
+    --panel-bg: rgba(15, 15, 15, 0.9);
+    --blood-hover: #ff5757;
+    --light-red: linear-gradient(to bottom, rgb(255, 77, 77), rgb(255, 36, 36));
+    --blood-red: #8b0000;
+    --text-gray: #b3b3b3;
+    --border-style: 1px solid #333;
+}
 /* --- MAIN CONTENT --- */
 main {
     max-width: 1200px;
@@ -54,8 +64,8 @@ main {
 }
 
 #discord-btn button {
-    background: var(--blood-red);
-    color: #000;
+    background: linear-gradient(to bottom, rgb(146, 0, 0), rgb(163, 0, 0));
+    color: #ffffff;
     border: none;
     padding: 15px 40px;
     font-weight: bold;
@@ -76,21 +86,20 @@ main {
 }
 
 #announcements-title {
+    background: linear-gradient(to bottom, rgb(146, 0, 0), rgb(163, 0, 0));
     text-align: center;
     margin-bottom: 40px;
     border-radius: 15px;
     padding-top: 10px;
     padding-bottom: 10px;
-    border-bottom: 2px solid var(--blood-red);
-    box-shadow: 0px 7px 15px var(--blood-red);
+    border-bottom: 2px solid var(--light-red);
     max-width: 400px;
     margin-left: auto;
     margin-right: auto;
-    background-color: black;
 }
 
 .title {
-    color: var(--blood-red);
+    color: white;
     text-shadow: 2px 2px 5px #000;
     margin: 0;
 }
@@ -140,7 +149,6 @@ main {
 }
 
 .leaderboard h3 {
-    font-family: "Creepster";
     color: var(--blood-red);
     border-bottom: 1px solid #444;
     padding-bottom: 10px;
@@ -156,10 +164,9 @@ main {
     padding: 40px;
     border: 1px dashed var(--blood-red);
 }
-/* FOOTER */
-.footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #111;
-    margin-top: 40px;
+
+.what-we-offer h1 {
+    font-size: 1.7rem;
+    color: var(--gold-accent);
 }
+

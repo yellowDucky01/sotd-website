@@ -3,6 +3,7 @@
     --bg-dark: #1d1d1d;
     --panel-bg: rgba(15, 15, 15, 0.9);
     --blood-hover: #ff5757;
+    --light-red: linear-gradient(to bottom, rgb(255, 77, 77), rgb(255, 36, 36));
     --blood-red: #8b0000;
     --text-gray: #b3b3b3;
     --border-style: 1px solid #333;
@@ -79,7 +80,7 @@ header {
 }
 
 .bottom-navbar {
-    background: rgba(106, 0, 0, 0.8);
+    background: rgb(1, 1, 1);
     border-top: 1px solid #444;
     border-bottom: 2px solid var(--blood-red);
     position: sticky;
@@ -109,7 +110,7 @@ header {
 }
 
 .menu-button:hover {
-    color: var(--bg-dark);
+    color: var(--blood-red);
     background: rgba(255, 255, 255, 0.05);
 }
 
@@ -134,4 +135,12 @@ header {
 .dropdown a:hover {
     background: var(--blood-red);
     color: #000;
+}
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #111;
+    margin-top: 40px;
 }
