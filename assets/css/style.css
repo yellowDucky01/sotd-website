@@ -61,13 +61,11 @@ main {
 
 #span-apocalyptic {
     color: var(--blood-red);
-    text-shadow: 0 0 15px rgba(211, 0, 0, 0.8);
     position: relative;
     display: inline-block;
 }
 
 #span-apocalyptic::after {
-    content: 'post-apocalyptic';
     position: absolute;
     left: 2px;
     top: 2px;
