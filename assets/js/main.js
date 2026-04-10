@@ -1,5 +1,3 @@
-
-
 let peakPlayers = localStorage.getItem("peak") || 0;
 
 async function fetchServer() {
@@ -45,3 +43,31 @@ async function fetchServer() {
 
 fetchServer();
 setInterval(fetchServer, 10000);
+
+const startDate = new Date(2026, 3, 8);
+const endDate = new Date(2026, 5, 8);
+
+function updateProgress() {
+    const now = new Date();
+
+    const totalDays = Math.floor((endDate - startDate) / (1000 * 60 * 60 * 24));
+    const daysPassed = Math.floor((now - startDate) / (1000 * 60 * 60 * 24));
+
+    let percent = (daysPassed / totalDays) * 100;
+
+    if (percent < 0) percent = 0;
+    if (percent > 100) percent = 100;
+
+    const level = document.getElementById("level");
+    const text = document.getElementById("percentText");
+
+    level.style.width = percent + "%";
+    text.innerText = percent.toFixed(2) + "% completed";
+
+    if (percent < 30) level.style.background = "red";
+    else if (percent < 70) level.style.background = "orange";
+    else level.style.background = "limegreen";
+}
+
+updateProgress();
+setInterval(updateProgress, 1000);

@@ -14,7 +14,7 @@
 }
 
 .subpage-title {
-    font-family: 'Outfit', sans-serif;
+    font-family: "Outfit", sans-serif;
     font-weight: 900;
     font-size: 3rem;
     color: #fff;
@@ -36,7 +36,7 @@
     position: relative;
 }
 .lore-event::before {
-    content: '';
+    content: "";
     position: absolute;
     left: -38px;
     top: 5px;
@@ -69,23 +69,31 @@
     font-weight: 600;
     color: var(--text-gray);
 }
-.support-form input, .support-form select, .support-form textarea {
+.support-form input,
+.support-form select,
+.support-form textarea {
     width: 100%;
     padding: 15px;
     background: rgba(0, 0, 0, 0.7);
     border: 1px solid rgba(255, 0, 0, 0.2);
     border-radius: 6px;
     color: #fff;
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
     transition: all 0.3s;
 }
-.support-form input:focus, .support-form select:focus, .support-form textarea:focus {
+.support-form input:focus,
+.support-form select:focus,
+.support-form textarea:focus {
     outline: none;
     border-color: var(--blood-red);
     box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
 }
 .btn-submit {
-    background: linear-gradient(135deg, rgba(146, 0, 0, 0.9), rgba(200, 0, 0, 0.9));
+    background: linear-gradient(
+        135deg,
+        rgba(146, 0, 0, 0.9),
+        rgba(200, 0, 0, 0.9)
+    );
     color: #ffffff;
     border: none;
     padding: 18px;
@@ -134,6 +142,36 @@
     color: var(--text-gray);
     font-weight: 600;
 }
+/* Battery Percent Date */
+.battery {
+    margin-left: 40px;
+    width: 160px;
+    height: 40px;
+    border: 3px solid #333;
+    border-radius: 6px;
+    position: relative;
+    padding: 3px;
+    background: #eee;
+}
+
+.battery::after {
+    content: "";
+    position: absolute;
+    right: -12px;
+    top: 10px;
+    width: 8px;
+    height: 15px;
+    background: #333;
+    border-radius: 2px;
+}
+
+.level {
+    height: 100%;
+    width: 0%;
+    background: limegreen;
+    border-radius: 3px;
+    transition: 0.5s;
+}
 
 /* Starter Guide */
 .guide-step {
@@ -143,7 +181,7 @@
     background: rgba(0, 0, 0, 0.4);
     padding: 25px;
     border-radius: 8px;
-    border-left: 3px solid rgba(255,0,0,0.3);
+    border-left: 3px solid rgba(255, 0, 0, 0.3);
     transition: 0.3s;
 }
 .guide-step:hover {
@@ -152,7 +190,7 @@
 }
 .step-number {
     font-size: 3rem;
-    font-family: 'Outfit', sans-serif;
+    font-family: "Outfit", sans-serif;
     font-weight: 900;
     color: var(--blood-red);
     min-width: 60px;
@@ -184,10 +222,10 @@
 }
 .wiki-sidebar {
     width: 250px;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0, 0, 0, 0.5);
     padding: 20px;
     border-radius: 8px;
-    border: 1px solid rgba(255,0,0,0.1);
+    border: 1px solid rgba(255, 0, 0, 0.1);
     height: fit-content;
 }
 .wiki-sidebar ul {
@@ -197,17 +235,18 @@
     display: block;
     padding: 12px;
     color: var(--text-gray);
-    border-bottom: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     transition: 0.3s;
 }
-.wiki-sidebar li a:hover, .wiki-sidebar li a.active {
+.wiki-sidebar li a:hover,
+.wiki-sidebar li a.active {
     color: var(--blood-red);
     padding-left: 18px;
-    background: rgba(255,0,0,0.05);
+    background: rgba(255, 0, 0, 0.05);
 }
 .wiki-content {
     flex: 1;
-    background: rgba(0,0,0,0.3);
+    background: rgba(0, 0, 0, 0.3);
     padding: 30px;
     border-radius: 8px;
 }
@@ -250,7 +289,7 @@
     transform: scale(1.05) translateY(-5px);
 }
 .donation-card.popular::before {
-    content: 'MOST POPULAR';
+    content: "MOST POPULAR";
     position: absolute;
     top: 25px;
     right: -35px;
@@ -267,7 +306,7 @@
     font-weight: 800;
     color: #fff;
     margin: 20px 0;
-    text-shadow: 0 0 10px rgba(255,0,0,0.5);
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
 }
 .donation-features {
     list-style: none;
@@ -282,7 +321,7 @@
     gap: 10px;
 }
 .donation-features li::before {
-    content: '✓';
+    content: "✓";
     color: var(--blood-red);
     font-weight: bold;
 }
