@@ -3,13 +3,14 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>State of the Dead</title>
+        <title>Server Wiki | State of the Dead</title>
         <link
-            href="https://fonts.googleapis.com/css2?family=Creepster&family=Roboto:wght@400;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Creepster&family=Roboto:wght@400;700&family=Inter:wght@300;400;600;800&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="assets/css/wiki.css" />
+        <link rel="stylesheet" href="assets/css/style.css" />
         <link rel="stylesheet" href="assets/css/globalstyle.css" />
+        <link rel="stylesheet" href="assets/css/subpages.css" />
     </head>
 
     <body>
@@ -46,12 +47,7 @@
                 <div class="navbar">
                     <nav class="menu">
                         <div class="menu-item">
-                            <button
-                                onclick="toggleDropdown(event, 'main')"
-                                class="menu-button"
-                            >
-                                MAIN MENU
-                            </button>
+                            <button class="menu-button">MAIN MENU</button>
                             <div id="main" class="dropdown">
                                 <a href="index.html">HOME</a>
                                 <a href="supportTIcket.html">SUPPORT TICKET</a>
@@ -59,25 +55,14 @@
                         </div>
 
                         <div class="menu-item">
-                            <button
-                                onclick="toggleDropdown(event, 'lore')"
-                                class="menu-button"
-                            >
-                                LORE
-                            </button>
-
+                            <button class="menu-button">LORE</button>
                             <div id="lore" class="dropdown">
                                 <a href="lore.html">SERVER LORE</a>
                             </div>
                         </div>
 
                         <div class="menu-item">
-                            <button
-                                onclick="toggleDropdown(event, 'info')"
-                                class="menu-button"
-                            >
-                                INFORMATION
-                            </button>
+                            <button class="menu-button">INFORMATION</button>
                             <div id="info" class="dropdown">
                                 <a href="serverInfo.html">SERVER INFO</a>
                                 <a href="starterGuide.html">STARTER GUIDE</a>
@@ -87,12 +72,7 @@
                         </div>
 
                         <div class="menu-item">
-                            <button
-                                onclick="toggleDropdown(event, 'donate')"
-                                class="menu-button"
-                            >
-                                DONATIONS
-                            </button>
+                            <button class="menu-button">DONATIONS</button>
                             <div id="donate" class="dropdown">
                                 <a href="donate.html">DONATE</a>
                                 <a href="donationPerks.html">DONATION PERKS</a>
@@ -102,6 +82,38 @@
                 </div>
             </div>
         </header>
+
+        <main class="subpage-main">
+            <h1 class="subpage-title">SOTD WIKI</h1>
+            
+            <div class="wiki-layout">
+                <aside class="wiki-sidebar">
+                    <ul>
+                        <li><a href="#" class="active">Getting Started</a></li>
+                        <li><a href="#">Base Building</a></li>
+                        <li><a href="#">Vehicles & Repair</a></li>
+                        <li><a href="#">Custom Weapons</a></li>
+                        <li><a href="#">Keycards & Bunkers</a></li>
+                        <li><a href="#">Trader Prices</a></li>
+                        <li><a href="#">Commands</a></li>
+                    </ul>
+                </aside>
+
+                <div class="wiki-content">
+                    <h2>Getting Started on SOTD</h2>
+                    <p>Welcome to the official State of the Dead Wiki. Here you will find all the custom mechanics and features that make our server unique.</p>
+                    
+                    <p><strong>First Steps:</strong> Unlike vanilla survival, our infected are slightly faster and hit harder, but drop unique loot such as bandages or low-tier ammo. Do not engage them without a melee weapon.</p>
+
+                    <h3 style="color: #fff; margin: 20px 0 10px;">The Map</h3>
+                    <p>We use a custom modified version of Chernarus where nature has completely taken over. Major highways are blocked by abandoned convoys, and thick forests hide military bunkers requiring color-coded keycards to access.</p>
+                    
+                    <h3 style="color: #fff; margin: 20px 0 10px;">Parties</h3>
+                    <p>Press <code>P</code> in-game to open the party menu. You can add up to 3 friends to your party to see their name tags from a short distance and prevent friendly fire with explosives.</p>
+                </div>
+            </div>
+        </main>
+
         <footer class="footer">
             <p>© 2026 SOTD Server. All rights reserved.</p>
         </footer>

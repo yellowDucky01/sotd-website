@@ -3,13 +3,14 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>State of the Dead</title>
+        <title>Server Lore | State of the Dead</title>
         <link
-            href="https://fonts.googleapis.com/css2?family=Creepster&family=Roboto:wght@400;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Creepster&family=Roboto:wght@400;700&family=Inter:wght@300;400;600;800&display=swap"
             rel="stylesheet"
         />
         <link rel="stylesheet" href="assets/css/style.css" />
         <link rel="stylesheet" href="assets/css/globalstyle.css" />
+        <link rel="stylesheet" href="assets/css/subpages.css" />
     </head>
 
     <body>
@@ -46,12 +47,7 @@
                 <div class="navbar">
                     <nav class="menu">
                         <div class="menu-item">
-                            <button
-                                onclick="toggleDropdown(event, 'main')"
-                                class="menu-button"
-                            >
-                                MAIN MENU
-                            </button>
+                            <button class="menu-button">MAIN MENU</button>
                             <div id="main" class="dropdown">
                                 <a href="index.html">HOME</a>
                                 <a href="supportTIcket.html">SUPPORT TICKET</a>
@@ -59,25 +55,14 @@
                         </div>
 
                         <div class="menu-item">
-                            <button
-                                onclick="toggleDropdown(event, 'lore')"
-                                class="menu-button"
-                            >
-                                LORE
-                            </button>
-
+                            <button class="menu-button">LORE</button>
                             <div id="lore" class="dropdown">
                                 <a href="lore.html">SERVER LORE</a>
                             </div>
                         </div>
 
                         <div class="menu-item">
-                            <button
-                                onclick="toggleDropdown(event, 'info')"
-                                class="menu-button"
-                            >
-                                INFORMATION
-                            </button>
+                            <button class="menu-button">INFORMATION</button>
                             <div id="info" class="dropdown">
                                 <a href="serverInfo.html">SERVER INFO</a>
                                 <a href="starterGuide.html">STARTER GUIDE</a>
@@ -87,12 +72,7 @@
                         </div>
 
                         <div class="menu-item">
-                            <button
-                                onclick="toggleDropdown(event, 'donate')"
-                                class="menu-button"
-                            >
-                                DONATIONS
-                            </button>
+                            <button class="menu-button">DONATIONS</button>
                             <div id="donate" class="dropdown">
                                 <a href="donate.html">DONATE</a>
                                 <a href="donationPerks.html">DONATION PERKS</a>
@@ -102,6 +82,28 @@
                 </div>
             </div>
         </header>
+
+        <main class="subpage-main">
+            <h1 class="subpage-title">THE OUTBREAK - SERVER LORE</h1>
+            
+            <div class="lore-timeline">
+                <div class="lore-event">
+                    <h3>Day 0: The Collapse</h3>
+                    <p>It began as a whisper in the wind—a strange flu that swept across the major cities. Within 48 hours, the hospitals were overrun. The infected didn't die; they changed. The government's immediate response was quarantine, but it was too little, too late.</p>
+                </div>
+                
+                <div class="lore-event">
+                    <h3>Month 3: The Blackout</h3>
+                    <p>The power grid failed. Communication satellites went dark. Without order to maintain society, the remaining uninfected turned on each other. Safe zones became slaughterhouses, and trust became the rarest commodity on earth.</p>
+                </div>
+                
+                <div class="lore-event">
+                    <h3>Year 5: Current Day (State of the Dead)</h3>
+                    <p>The world is unrecognizable. The infected roam the ruins of civilization, while the living hide in the shadows. Factions have risen from the ashes, battling for control of dwindling resources. You have just woken up on the shoreline with nothing but the clothes on your back. Will you rebuild, conquer, or become just another victim to the State of the Dead?</p>
+                </div>
+            </div>
+        </main>
+
         <footer class="footer">
             <p>© 2026 SOTD Server. All rights reserved.</p>
         </footer>

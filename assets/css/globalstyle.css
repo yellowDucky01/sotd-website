@@ -1,12 +1,17 @@
 /* --- CSS VARIABLES --- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+
 :root {
-    --bg-dark: #1d1d1d;
-    --panel-bg: rgba(15, 15, 15, 0.9);
-    --blood-hover: #ff5757;
-    --light-red: linear-gradient(to bottom, rgb(255, 77, 77), rgb(255, 36, 36));
-    --blood-red: #8b0000;
+    --bg-dark: #0a0a0a;
+    --panel-bg: rgba(15, 15, 15, 0.65);
+    --panel-border: rgba(255, 0, 0, 0.2);
+    --blood-hover: #ff2a2a;
+    --light-red: linear-gradient(to bottom, rgb(255, 45, 45), rgb(200, 0, 0));
+    --blood-red: #d30000;
     --text-gray: #b3b3b3;
-    --border-style: 1px solid #333;
+    --border-style: 1px solid var(--panel-border);
+    --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.7);
+    --glass-blur: blur(12px);
 }
 
 /* --- GLOBAL STYLES --- */
@@ -17,24 +22,47 @@
 }
 
 body {
-    font-family: "Roboto", sans-serif;
-    background: var(--bg-dark);
-    background-size: cover;
+    font-family: "Inter", sans-serif;
+    background: radial-gradient(circle at 50% 0%, #1c0505 0%, #0a0a0a 100%);
+    background-color: var(--bg-dark);
+    background-attachment: fixed;
     color: #fff;
     line-height: 1.6;
     overflow-x: hidden;
+    position: relative;
+    min-height: 100vh;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200vw;
+    height: 100vh;
+    background: url('https://raw.githubusercontent.com/danielstuart14/CSS_FOG_ANIMATION/master/fog1.png') repeat-x;
+    background-size: cover;
+    opacity: 0.15;
+    animation: fog-anim 60s linear infinite;
+    pointer-events: none;
+    z-index: -1;
+}
+
+@keyframes fog-anim {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-100vw, 0, 0); }
 }
 
 a {
     text-decoration: none;
     color: inherit;
-    transition: 0.3s;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
 /* --- HEADER & NAVIGATION --- */
 header {
     width: 100%;
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.9), transparent);
+    background: linear-gradient(to bottom, rgba(5, 0, 0, 0.95), transparent);
 }
 
 .navbar {
@@ -46,17 +74,20 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
+    padding: 10px 20px;
 }
 
 .top-left a {
-    font-size: 2rem;
-    font-weight: bolder;
+    font-size: 1.8rem;
+    font-family: 'Creepster', cursive;
     color: white;
-    text-shadow:
-        0 0 10px rgba(197, 89, 89, 0.5),
-        3px 3px 0px #000;
-    letter-spacing: 2px;
+    text-shadow: 0 0 15px rgba(255, 0, 0, 0.6), 3px 3px 0px #000;
+    letter-spacing: 3px;
+    transition: text-shadow 0.3s ease;
+}
+
+.top-left a:hover {
+    text-shadow: 0 0 25px rgba(255, 0, 0, 1), 3px 3px 0px #000;
 }
 
 .top-left #dead {
@@ -65,27 +96,47 @@ header {
 
 .server-info {
     display: flex;
-    gap: 30px;
+    gap: 35px;
+    background: var(--panel-bg);
+    padding: 10px 25px;
+    border-radius: 8px;
+    border: var(--border-style);
+    backdrop-filter: var(--glass-blur);
+    -webkit-backdrop-filter: var(--glass-blur);
+    box-shadow: var(--glass-shadow);
 }
 
-.info-block p:first-child {
-    font-size: 0.7rem;
+.info-block p:first-child, .players p {
+    font-size: 0.75rem;
     color: var(--text-gray);
     text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .info-block p:last-child {
-    font-weight: bold;
+    font-weight: 800;
     color: var(--blood-red);
+    font-size: 1.1rem;
+    text-shadow: 0 0 8px rgba(211, 0, 0, 0.5);
+}
+
+.players p strong {
+    color: var(--blood-red);
+    font-size: 1.1rem;
+    display: block;
+    text-shadow: 0 0 8px rgba(211, 0, 0, 0.5);
 }
 
 .bottom-navbar {
-    background: rgb(1, 1, 1);
-    border-top: 1px solid #444;
+    background: rgba(10, 10, 10, 0.85);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    border-top: 1px solid rgba(255, 0, 0, 0.1);
     border-bottom: 2px solid var(--blood-red);
     position: sticky;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.9);
 }
 
 .menu {
@@ -95,46 +146,95 @@ header {
 
 .menu-item {
     position: relative;
+    font-family: 'Inter', sans-serif;
 }
 
 .menu-button {
     background: none;
     border: none;
     color: #fff;
-    padding: 20px 30px;
+    padding: 15px 35px;
     font-size: 0.9rem;
-    font-weight: bold;
+    font-weight: 600;
     cursor: pointer;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease;
+    position: relative;
+    font-family: "Inter", sans-serif;
 }
 
-.menu-button:hover {
-    color: var(--blood-red);
-    background: rgba(255, 255, 255, 0.05);
+.menu-button::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 50%;
+    width: 0;
+    height: 3px;
+    background: var(--light-red);
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px var(--blood-red);
 }
 
+.menu-item:hover .menu-button::after {
+    width: 100%;
+}
+
+.menu-button:hover, .menu-item:hover .menu-button {
+    color: #fff;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
+}
+
+/* Dropdown */
 .dropdown {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    background: #111;
-    min-width: 200px;
+    background: rgba(15, 15, 15, 0.98);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    min-width: 220px;
     border: 1px solid var(--blood-red);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.8);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.9);
+    border-radius: 0 0 8px 8px;
+    animation: dropDownAnim 0.25s ease-out forwards;
+    transform-origin: top;
+}
+
+@keyframes dropDownAnim {
+    from {
+        opacity: 0;
+        transform: translateY(10px) scaleY(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scaleY(1);
+    }
+}
+
+.menu-item:hover .dropdown {
+    display: block;
 }
 
 .dropdown a {
     display: block;
-    padding: 12px 20px;
+    padding: 15px 25px;
     font-size: 0.85rem;
-    border-bottom: 1px solid #222;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.dropdown a:last-child {
+    border-bottom: none;
 }
 
 .dropdown a:hover {
-    background: var(--blood-red);
-    color: #000;
+    background: var(--light-red);
+    color: #fff;
+    padding-left: 32px;
 }
 
 /* FOOTER */
@@ -143,7 +243,33 @@ header {
     bottom: 0;
     left: 0;
     width: 100%;
-    height: 25px;
+    padding: 15px 0;
     text-align: center;
-    background-color: #111;
+    background-color: rgba(5, 5, 5, 0.95);
+    border-top: var(--border-style);
+    font-size: 0.8rem;
+    color: var(--text-gray);
+    letter-spacing: 1px;
+    z-index: 10;
+}
+
+@media (max-width: 768px) {
+    .top-navbar {
+        flex-direction: column;
+        gap: 15px;
+    }
+    .menu {
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu-button {
+        padding: 15px;
+        width: 100%;
+    }
+    .dropdown {
+        position: static;
+        width: 100%;
+        text-align: center;
+        box-shadow: none;
+    }
 }

@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>State of the Dead</title>
         <link
-            href="https://fonts.googleapis.com/css2?family=Creepster&family=Roboto:wght@400;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Creepster&family=Roboto:wght@400;700&family=Inter:wght@300;400;600;800&display=swap"
             rel="stylesheet"
         />
         <link rel="stylesheet" href="assets/css/style.css" />
@@ -26,10 +26,6 @@
                     <div class="top-right">
                         <div class="server-info">
                             <div class="info-block">
-                                <p>Server Time</p>
-                                <p>10:45 AM</p>
-                            </div>
-                            <div class="info-block">
                                 <p>Server Status</p>
                                 <p id="status">Loading...</p>
                             </div>
@@ -46,10 +42,7 @@
                 <div class="navbar">
                     <nav class="menu">
                         <div class="menu-item">
-                            <button
-                                onclick="toggleDropdown(event, 'main')"
-                                class="menu-button"
-                            >
+                            <button class="menu-button">
                                 MAIN MENU
                             </button>
                             <div id="main" class="dropdown">
@@ -59,10 +52,7 @@
                         </div>
 
                         <div class="menu-item">
-                            <button
-                                onclick="toggleDropdown(event, 'lore')"
-                                class="menu-button"
-                            >
+                            <button class="menu-button">
                                 LORE
                             </button>
 
@@ -72,10 +62,7 @@
                         </div>
 
                         <div class="menu-item">
-                            <button
-                                onclick="toggleDropdown(event, 'info')"
-                                class="menu-button"
-                            >
+                            <button class="menu-button">
                                 INFORMATION
                             </button>
                             <div id="info" class="dropdown">
@@ -87,10 +74,7 @@
                         </div>
 
                         <div class="menu-item">
-                            <button
-                                onclick="toggleDropdown(event, 'donate')"
-                                class="menu-button"
-                            >
+                            <button class="menu-button">
                                 DONATIONS
                             </button>
                             <div id="donate" class="dropdown">
@@ -186,13 +170,13 @@
             <div class="leaderboard">
                 <div class="top-factions">
                     <h3>TOP FACTIONS</h3>
-                    <p>1. The Reapers - 15,200pts</p>
-                    <p>2. Last Hope - 12,800pts</p>
+                    <p><span>1. The Reapers</span> <span>15,200pts</span></p>
+                    <p><span>2. Last Hope</span> <span>12,800pts</span></p>
                 </div>
                 <div class="top-players">
                     <h3>30 DAY TOP PLAYERS</h3>
-                    <p>1. Survivor_X - 2,500 Kills</p>
-                    <p>2. DeadManWalking - 1,850 Kills</p>
+                    <p><span>1. Survivor_X</span> <span>2,500 Kills</span></p>
+                    <p><span>2. DeadManWalking</span> <span>1,850 Kills</span></p>
                 </div>
             </div>
         </main>

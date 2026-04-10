@@ -3,13 +3,14 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>State of the Dead</title>
+        <title>Donation Perks | State of the Dead</title>
         <link
-            href="https://fonts.googleapis.com/css2?family=Creepster&family=Roboto:wght@400;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Creepster&family=Roboto:wght@400;700&family=Inter:wght@300;400;600;800&display=swap"
             rel="stylesheet"
         />
         <link rel="stylesheet" href="assets/css/style.css" />
         <link rel="stylesheet" href="assets/css/globalstyle.css" />
+        <link rel="stylesheet" href="assets/css/subpages.css" />
     </head>
 
     <body>
@@ -46,12 +47,7 @@
                 <div class="navbar">
                     <nav class="menu">
                         <div class="menu-item">
-                            <button
-                                onclick="toggleDropdown(event, 'main')"
-                                class="menu-button"
-                            >
-                                MAIN MENU
-                            </button>
+                            <button class="menu-button">MAIN MENU</button>
                             <div id="main" class="dropdown">
                                 <a href="index.html">HOME</a>
                                 <a href="supportTIcket.html">SUPPORT TICKET</a>
@@ -59,25 +55,14 @@
                         </div>
 
                         <div class="menu-item">
-                            <button
-                                onclick="toggleDropdown(event, 'lore')"
-                                class="menu-button"
-                            >
-                                LORE
-                            </button>
-
+                            <button class="menu-button">LORE</button>
                             <div id="lore" class="dropdown">
                                 <a href="lore.html">SERVER LORE</a>
                             </div>
                         </div>
 
                         <div class="menu-item">
-                            <button
-                                onclick="toggleDropdown(event, 'info')"
-                                class="menu-button"
-                            >
-                                INFORMATION
-                            </button>
+                            <button class="menu-button">INFORMATION</button>
                             <div id="info" class="dropdown">
                                 <a href="serverInfo.html">SERVER INFO</a>
                                 <a href="starterGuide.html">STARTER GUIDE</a>
@@ -87,12 +72,7 @@
                         </div>
 
                         <div class="menu-item">
-                            <button
-                                onclick="toggleDropdown(event, 'donate')"
-                                class="menu-button"
-                            >
-                                DONATIONS
-                            </button>
+                            <button class="menu-button">DONATIONS</button>
                             <div id="donate" class="dropdown">
                                 <a href="donate.html">DONATE</a>
                                 <a href="donationPerks.html">DONATION PERKS</a>
@@ -102,6 +82,32 @@
                 </div>
             </div>
         </header>
+
+        <main class="subpage-main">
+            <h1 class="subpage-title">DONATION PERKS EXPLAINED</h1>
+            
+            <p style="color: var(--text-gray); margin-bottom: 30px;">We believe in keeping a level playing field. Our donation perks are strictly restricted to Pay-for-Convenience and Pay-to-Look-Cool. We do not sell guns, armor, or unraidable bases. Here is an explanation of what the perks entail.</p>
+
+            <div class="rule-item" style="border-left-color: #ffd700;">
+                <h4 style="color: #ffd700;">Priority Queue</h4>
+                <p>During wipe day, the server gets extremely full. Priority queue allows you to bypass the standard line and join much faster.</p>
+            </div>
+
+            <div class="rule-item" style="border-left-color: #ffd700;">
+                <h4 style="color: #ffd700;">Custom Base Flag</h4>
+                <p>Send an image block to admins on Discord, and we will upload it so you can proudly fly your faction's flag outside your base.</p>
+            </div>
+
+            <div class="rule-item" style="border-left-color: #ffd700;">
+                <h4 style="color: #ffd700;">Supply Drop Flare</h4>
+                <p>A once-a-day item. When thrown, it calls in a care package containing food, water, building materials, and clothing. No top-tier weapons are included to prevent P2W.</p>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="donate.html" class="btn-submit" style="text-decoration: none;">VIEW DONATION TIERS</a>
+            </div>
+        </main>
+
         <footer class="footer">
             <p>© 2026 SOTD Server. All rights reserved.</p>
         </footer>

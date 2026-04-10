@@ -3,13 +3,14 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>State of the Dead</title>
+        <title>Server Rules | State of the Dead</title>
         <link
-            href="https://fonts.googleapis.com/css2?family=Creepster&family=Roboto:wght@400;700&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Creepster&family=Roboto:wght@400;700&family=Inter:wght@300;400;600;800&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="assets/css/serverRules.css" />
+        <link rel="stylesheet" href="assets/css/style.css" />
         <link rel="stylesheet" href="assets/css/globalstyle.css" />
+        <link rel="stylesheet" href="assets/css/subpages.css" />
     </head>
 
     <body>
@@ -46,12 +47,7 @@
                 <div class="navbar">
                     <nav class="menu">
                         <div class="menu-item">
-                            <button
-                                onclick="toggleDropdown(event, 'main')"
-                                class="menu-button"
-                            >
-                                MAIN MENU
-                            </button>
+                            <button class="menu-button">MAIN MENU</button>
                             <div id="main" class="dropdown">
                                 <a href="index.html">HOME</a>
                                 <a href="supportTIcket.html">SUPPORT TICKET</a>
@@ -59,25 +55,14 @@
                         </div>
 
                         <div class="menu-item">
-                            <button
-                                onclick="toggleDropdown(event, 'lore')"
-                                class="menu-button"
-                            >
-                                LORE
-                            </button>
-
+                            <button class="menu-button">LORE</button>
                             <div id="lore" class="dropdown">
                                 <a href="lore.html">SERVER LORE</a>
                             </div>
                         </div>
 
                         <div class="menu-item">
-                            <button
-                                onclick="toggleDropdown(event, 'info')"
-                                class="menu-button"
-                            >
-                                INFORMATION
-                            </button>
+                            <button class="menu-button">INFORMATION</button>
                             <div id="info" class="dropdown">
                                 <a href="serverInfo.html">SERVER INFO</a>
                                 <a href="starterGuide.html">STARTER GUIDE</a>
@@ -87,12 +72,7 @@
                         </div>
 
                         <div class="menu-item">
-                            <button
-                                onclick="toggleDropdown(event, 'donate')"
-                                class="menu-button"
-                            >
-                                DONATIONS
-                            </button>
+                            <button class="menu-button">DONATIONS</button>
                             <div id="donate" class="dropdown">
                                 <a href="donate.html">DONATE</a>
                                 <a href="donationPerks.html">DONATION PERKS</a>
@@ -103,361 +83,35 @@
             </div>
         </header>
 
-        <section class="server-container">
-            <div class="server-card">
-                <h2>PvP/PvE Rules</h2>
-                <ul>
-                    <li>
-                        PvP is ENABLED at all times, except in designated safe
-                        zones(Muldraugh Only)
-                    </li>
-                    <li>
-                        No combat logging (logging out to avoid death or
-                        capture).
-                    </li>
-                    <li>Shooting inside your own car is also allowed</li>
-                    <li>No spawn killing or camping spawn/safe zones.</li>
-                    <li>
-                        No exploiting game mechanics (animation abuse, glitches,
-                        dupes).
-                    </li>
-                </ul>
-                <br />
-                <h2>Factions & Territory</h2>
-                <ul>
-                    <li>
-                        Factions must have at least 2 members to be considered
-                        active.
-                    </li>
-                    <li>
-                        Offline raiding is NOT allowed unless approved by
-                        admins.
-                    </li>
-                </ul>
-                <br />
-                <h2>Raiding & Combat</h2>
-                <ul>
-                    <li>
-                        Raiding is allowed only during raid hours (as announced
-                        by admins).
-                    </li>
-                    <li>
-                        No griefing: destroying bases without looting is
-                        prohibited.
-                    </li>
-                    <li>
-                        No excessive wall stacking or unreachable sky bases.
-                    </li>
-                    <li>Use of explosives follows admin-set limits.</li>
-                </ul>
-                <br />
-                <h2>Safe Zones</h2>
-                <ul>
-                    <li>Safe zones are strictly no PvP.</li>
-                    <li>No baiting or luring zombies into safe zones.</li>
-                    <li>
-                        Stealing or scouting for raids inside safe zones is
-                        forbidden.
-                    </li>
-                </ul>
-                <br />
-                <h2>Gameplay Fairness</h2>
-                <ul>
-                    <li>No hacking, cheating, or third-party tools.</li>
-                    <li>
-                        No alt accounts for scouting, storage, or combat
-                        advantage.
-                    </li>
-                </ul>
-                <br />
-                <h2>Community Conduct</h2>
-                <ul>
-                    <li>
-                        No toxic behavior (harassment, racism, hate speech).
-                    </li>
-                    <li>Trash talk is allowed—but keep it reasonable.</li>
-                </ul>
-                <br />
-                <h2>Admin Authority</h2>
-                <ul>
-                    <li>Admin decisions are final.</li>
-                    <li>Abuse of admin tools results in permanent ban.</li>
-                    <li>Appeals must be submitted via ticket system.</li>
-                </ul>
-                <br />
-                <h2>Punishments</h2>
-                <ul>
-                    <li>1st offense: Warning</li>
-                    <li>2nd offense: Temporary ban</li>
-                    <li>Severe offenses: Permanent ban</li>
-                </ul>
-                <br />
-                <h2>Safehouse Raiding Rules</h2>
-                <ul>
-                    <li>Safehouse War Declaration Required</li>
-                    <ul>
-                        <li>
-                            Before raiding a player's safehouse, you must first
-                            declare a Safehouse War to the player you want to
-                            raid. Raiding without declaring a war is not
-                            allowed.
-                        </li>
-                    </ul>
-                    <li>No Griefing</li>
-                    <ul>
-                        <li>
-                            Destroying or damaging bases is strictly prohibited.
-                            Raiding must have a purpose (Looting player Bodies
-                            around their Houses), not just destruction.
-                        </li>
-                    </ul>
-                    <li>No Use of Explosives</li>
-                    <ul>
-                        <li>
-                            Explosives are not allowed when raiding safehouses.
-                        </li>
-                    </ul>
-                    <li>No Spawn Killing or Spawn Camping</li>
-                    <ul>
-                        <li>
-                            Players must not kill or wait for players at spawn
-                            points or designated safe zones.
-                        </li>
-                    </ul>
-                    <li>No Combat Logging</li>
-                    <ul>
-                        <li>
-                            Logging out during combat to avoid death, capture,
-                            or consequences is not allowed.
-                        </li>
-                    </ul>
-                </ul>
-                <br />
-                <h2>No Intensional Base Camping</h2>
-                <h3>Why It’s Restricted?</h3>
-                <ul>
-                    <li>Unfair Advantage</li>
-                    <ul>
-                        <li>
-                            Camping right near an enemy spawn or base can make
-                            it impossible for them to play normally.
-                        </li>
-                    </ul>
-                    <li>Griefing / Harassment</li>
-                    <ul>
-                        <li>
-                            Constant attacks or blocking resources can ruin the
-                            game experience for others.
-                        </li>
-                    </ul>
-                    <li>Game Balance</li>
-                    <ul>
-                        <li>It can break intended game mechanics</li>
-                    </ul>
-                </ul>
-                <br />
-                <h2>Gameplay Fairness</h2>
-                <ul>
-                    <li>No hacking, cheating, or third-party tools.</li>
-                    <ul>
-                        <li>
-                            Any Player Caught Will be listed in the BAN LIST
-                            CHANNEL! (DISCORD CHANNEL)
-                        </li>
-                    </ul>
-                </ul>
-                <br />
-                <h2>Reporting Violations</h2>
-                <h3>
-                    If a player is caught breaking the rules and another player
-                    has clear video evidence showing how the incident happened,
-                    it can be submitted to the admins for review
-                </h3>
-                <ul>
-                    <li>The video must clearly show</li>
-                    <li>The player committing the violation</li>
-                    <li>The situation and how it happened</li>
-                    <li>The player’s name visible if possible</li>
-                </ul>
-                <br />
-                <h2>Punishment</h2>
-                <ul>
-                    <li>1st Offense: Warning</li>
-                    <li>2nd Offense: Temporary Ban</li>
-                    <li>Severe Offenses: Permanent Ban</li>
-                </ul>
-                <br />
-                <h2>
-                    Safehouse War Rule – Defender Faction Notice All players and
-                    factions acting as Defenders should be aware of the
-                    following rule regarding Safehouse Wars
-                </h2>
-                <ul>
-                    <li>
-                        If an Attacker faction/player claims your safehouse for
-                        a Safehouse War, the war will automatically activate
-                        once the claim is made.
-                    </li>
-                    <li>
-                        This will apply even if the defending player or faction
-                        declines the war request.
-                    </li>
-                    <li>
-                        Defenders should be prepared to defend their safehouse
-                        once it has been claimed.
-                    </li>
-                </ul>
-                <br />
-                <h2>Anti-Griefing Limitation</h2>
-                <h3>To prevent abuse or repetitive attacks</h3>
-                <ul>
-                    <li>
-                        Each attacker player or faction is limited to a maximum
-                        of 3
-                    </li>
-                    <li>
-                        Safehouse Wars against the same target
-                        safehouse/faction.
-                    </li>
-                    <li>
-                        Repeated attacks beyond this limit may be considered
-                        griefing and will be subject to administrative action.
-                    </li>
-                </ul>
-                <br />
-                <h2>Safehouse War – Attacker Faction Rules</h2>
-                <h3>
-                    All factions or players initiating a Safehouse War
-                    (Attackers) must follow these rules during the war
-                </h3>
-                <ul>
-                    <li>
-                        Do not claim a safehouse that is close to another
-                        player’s safehouse.
-                    </li>
-                    <li>
-                        Bombs or any explosive devices are strictly prohibited
-                        during Safehouse Wars.
-                    </li>
-                    <li>
-                        Respawn killing / spawn camping is not allowed. Do not
-                        repeatedly kill players at their respawn point.
-                    </li>
-                    <li>
-                        Do not build stairs, structures, or any objects that
-                        give an unfair advantage during the war.
-                    </li>
-                    <h5>
-                        Any violation of these rules may result in
-                        administrative action or penalties.
-                    </h5>
-                </ul>
-                <br />
-                <h2>Trashtalk Rule</h4>
-                <h3>
-                    Trashtalk is only allowed in-game as part of competitive
-                    gameplay. Keep it within the game environment and do not
-                    take it personally.
-                </h3>
-                <ul>
-                    <li>
-                        Trashtalking in Discord is NOT allowed under any
-                        circumstances.
-                    </li>
-                    <li>Respect Still Applies</li>
-                    <ul>
-                        <li>
-                            Hate speech, harassment, excessive toxicity, or
-                            real-life threats are strictly prohibited anywhere,
-                            including in-game.
-                        </li>
-                    </ul>
-                    <h5>
-                        Failure to follow this rule may result in warnings,
-                        mutes, or bans.
-                    </h5>
-                </ul>
-                <br />
-                <h2>RAIDING / FACTION CLAIM WAR CLARIFICATION</h2>
-                <h3>
-                    To avoid confusion regarding Safehouse Claim Wars, please
-                    read the following
-                </h3>
-                <ul>
-                    <li>Faction Claim War (Safehouse War)</li>
-                    <ul>
-                        <li>
-                            Once you claim a Safehouse War against another
-                            faction, you are NOT allowed to loot or steal
-                            supplies from that faction’s safehouse.
-                        </li>
-                        <li>
-                            The objective of a Safehouse War is to fight for
-                            control, not to raid or take stored items.
-                        </li>
-                    </ul>
-                    <li>Event Faction War Exception</li>
-                    <ul>
-                        <li>
-                            Looting safehouses is ONLY allowed during official
-                            Event Faction Wars.
-                        </li>
-                        <li>
-                            During these events, factions may loot other
-                            players’ safehouses only within the event’s
-                            specified time window.
-                        </li>
-                    </ul>
-                    <li>Offline Protection During Events</li>
-                    <ul>
-                        <li>
-                            If all members of a faction are offline, their
-                            safehouse cannot be raided or looted, even during an
-                            Event Faction War.
-                        </li>
-                    </ul>
-                </ul>
-                <br />
-                <h2>Muldraugh PVE Zone Regulations</h2>
-                <ul>
-                    <li>Prohibited in the Muldraugh PVE Zone</li>
-                    <ul>
-                        <li>No baiting or luring zombies into Muldraugh</li>
-                        <li>No stealing, griefing, or causing chaos</li>
-                        <li>
-                            No actions that intentionally disrupt the peace of
-                            the PVE community
-                        </li>
-                        <li>
-                            No camping/scouting around the exit/outside borders
-                            of Muldraugh
-                        </li>
-                    </ul>
-                    <li>Roleplay-Friendly Zone</li>
-                    <ul>
-                        <li>
-                            Because Muldraugh is PVE, it functions similarly to
-                            an RP-safe zone.
-                        </li>
-                        <li>
-                            Respect the environment and the players who choose
-                            to live and build here.
-                        </li>
-                    </ul>
-                    <li>Outside Muldraugh</li>
-                    <ul>
-                        <li>
-                            Beyond the borders of Muldraugh, the other cities
-                            are no longer under our jurisdiction.
-                        </li>
-                        <li>
-                            Players are free to act as they wish outside the PVE
-                            zone.
-                        </li>
-                    </ul>
-                </ul>
+        <main class="subpage-main">
+            <h1 class="subpage-title">SERVER RULES</h1>
+            <p style="text-align: center; color: var(--text-gray); margin-bottom: 40px;">Failure to adhere to these rules will result in warnings, kicks, or a permanent ban depending on severity.</p>
+
+            <div class="rule-item">
+                <h4>1. No Cheating or Exploiting</h4>
+                <p>Use of aimbots, ESP, duping glitches, or falling under the map to raid bases is strictly prohibited and results in an immediate permanent ban without appeal.</p>
             </div>
-        </section>
+
+            <div class="rule-item">
+                <h4>2. Team Limits (Max 4)</h4>
+                <p>You may only roam, raid, base, or trade in groups of 4 or fewer. If an alliance occurs during a fight making it 5+ vs X, you will be struck. "We were just trading" is not an excuse outside safezones.</p>
+            </div>
+
+            <div class="rule-item">
+                <h4>3. Safezone Rules</h4>
+                <p>No camping outside the safezone radius (must be 400m away). No stealing from vehicles inside the safezone. No mic spamming in the trader area.</p>
+            </div>
+
+            <div class="rule-item">
+                <h4>4. Toxicity & Racism</h4>
+                <p>Trash talk is allowed and expected in PvP games. However, racism, sexism, real-life threats, or doxxing will lead to an instant and permanent ban from both Discord and Server.</p>
+            </div>
+
+            <div class="rule-item">
+                <h4>5. Base Raiding</h4>
+                <p>Raid times are Friday 6:00 PM EST to Sunday 11:59 PM EST. Offline raiding is allowed during this window. Boosting into bases is allowed as long as you do not use glitches/exploits.</p>
+            </div>
+        </main>
 
         <footer class="footer">
             <p>© 2026 SOTD Server. All rights reserved.</p>
