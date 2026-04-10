@@ -1,5 +1,5 @@
 /* --- CSS VARIABLES --- */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700;900&display=swap');
 
 :root {
     --bg-dark: #0a0a0a;
@@ -74,12 +74,13 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 6px 20px;
 }
 
 .top-left a {
     font-size: 1.8rem;
-    font-family: 'Creepster', cursive;
+    font-family: 'Outfit', sans-serif;
+    font-weight: 900;
     color: white;
     text-shadow: 0 0 15px rgba(255, 0, 0, 0.6), 3px 3px 0px #000;
     letter-spacing: 3px;
@@ -96,18 +97,30 @@ header {
 
 .server-info {
     display: flex;
-    gap: 35px;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
     background: var(--panel-bg);
-    padding: 10px 25px;
-    border-radius: 8px;
+    padding: 8px 16px;
+    border-radius: 6px;
     border: var(--border-style);
     backdrop-filter: var(--glass-blur);
     -webkit-backdrop-filter: var(--glass-blur);
     box-shadow: var(--glass-shadow);
 }
 
+.info-block {
+    text-align: center;
+}
+
+.players {
+    display: flex;
+    gap: 15px;
+    text-align: center;
+}
+
 .info-block p:first-child, .players p {
-    font-size: 0.75rem;
+    font-size: 0.6rem;
     color: var(--text-gray);
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -116,13 +129,13 @@ header {
 .info-block p:last-child {
     font-weight: 800;
     color: var(--blood-red);
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     text-shadow: 0 0 8px rgba(211, 0, 0, 0.5);
 }
 
 .players p strong {
     color: var(--blood-red);
-    font-size: 1.1rem;
+    font-size: 0.9rem;
     display: block;
     text-shadow: 0 0 8px rgba(211, 0, 0, 0.5);
 }
@@ -153,7 +166,7 @@ header {
     background: none;
     border: none;
     color: #fff;
-    padding: 15px 35px;
+    padding: 12px 30px;
     font-size: 0.9rem;
     font-weight: 600;
     cursor: pointer;
