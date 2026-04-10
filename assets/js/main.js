@@ -71,3 +71,29 @@ function updateProgress() {
 
 updateProgress();
 setInterval(updateProgress, 1000);
+
+// Payment Modal Functions
+function openPaymentModal(tierName, tierPrice) {
+    const modal = document.getElementById('paymentModal');
+    if (!modal) return;
+    
+    document.getElementById('modalTierName').innerText = tierName;
+    document.getElementById('modalTierPrice').innerText = '$' + tierPrice;
+    
+    modal.style.display = 'block';
+}
+
+function closePaymentModal() {
+    const modal = document.getElementById('paymentModal');
+    if (modal) {
+        modal.style.display = 'none';
+    }
+}
+
+// Close modal if user clicks outside of it
+window.onclick = function(event) {
+    const modal = document.getElementById('paymentModal');
+    if (event.target == modal) {
+        modal.style.display = 'none';
+    }
+}
