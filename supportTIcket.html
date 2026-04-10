@@ -26,14 +26,19 @@
 
                     <div class="top-right">
                         <div class="server-info">
-                            
                             <div class="info-block">
                                 <p>Server Status</p>
                                 <p id="status">Loading...</p>
                             </div>
                             <div class="players">
-                                <p>Online Players <strong id="players">Loading...</strong></p>
-                                <p>Online Peak <strong id="peak">Loading...</strong></p>
+                                <p>
+                                    Online Players
+                                    <strong id="players">Loading...</strong>
+                                </p>
+                                <p>
+                                    Online Peak
+                                    <strong id="peak">Loading...</strong>
+                                </p>
                             </div>
                         </div>
                     </div>
@@ -75,6 +80,14 @@
                                 <a href="donationPerks.html">DONATION PERKS</a>
                             </div>
                         </div>
+
+                        <div class="menu-item">
+                            <button class="menu-button">PROMOTIONS</button>
+                            <div id="donate" class="dropdown">
+                                <a href="donate.html">PROMOTE</a>
+                                <a href="donationPerks.html">PROMOTER PERKS</a>
+                            </div>
+                        </div>
                     </nav>
                 </div>
             </div>
@@ -82,30 +95,56 @@
 
         <main class="subpage-main">
             <h1 class="subpage-title">OPEN A TICKET</h1>
-            
-            <form class="support-form" onsubmit="event.preventDefault(); alert('Ticket System Integration Required. (Simulated Success)');">
+
+            <form
+                class="support-form"
+                onsubmit="
+                    event.preventDefault();
+                    alert(
+                        'Ticket System Integration Required. (Simulated Success)',
+                    );
+                "
+            >
                 <div>
                     <label for="username">In-game Name / Discord ID</label>
-                    <input type="text" id="username" placeholder="PlayerName#1234" required />
+                    <input
+                        type="text"
+                        id="username"
+                        placeholder="PlayerName#1234"
+                        required
+                    />
                 </div>
-                
+
                 <div>
                     <label for="category">Issue Category</label>
                     <select id="category" required>
-                        <option value="" disabled selected>Select an issue...</option>
-                        <option value="report">Player Report (Cheating/Toxicity)</option>
+                        <option value="" disabled selected>
+                            Select an issue...
+                        </option>
+                        <option value="report">
+                            Player Report (Cheating/Toxicity)
+                        </option>
                         <option value="bug">Report a Bug / Exploit</option>
-                        <option value="purchase">Donation / VIP Purchase Issue</option>
+                        <option value="purchase">
+                            Donation / VIP Purchase Issue
+                        </option>
                         <option value="other">Other / General Support</option>
                     </select>
                 </div>
-                
+
                 <div>
                     <label for="description">Detailed Description</label>
-                    <textarea id="description" rows="6" placeholder="Please provide exactly what happened, coordinates (if necessary), and any evidence links (YouTube/Imgur)..." required></textarea>
+                    <textarea
+                        id="description"
+                        rows="6"
+                        placeholder="Please provide exactly what happened, coordinates (if necessary), and any evidence links (YouTube/Imgur)..."
+                        required
+                    ></textarea>
                 </div>
-                
-                <button type="submit" class="btn-submit">Submit Support Ticket</button>
+
+                <button type="submit" class="btn-submit">
+                    Submit Support Ticket
+                </button>
             </form>
         </main>
 
