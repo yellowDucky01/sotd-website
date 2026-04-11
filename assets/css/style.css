@@ -124,7 +124,6 @@ main {
 }
 
 #announcements-title::after {
-    content: '';
     position: absolute;
     bottom: 0; left: 20%;
     width: 60%; height: 2px;
