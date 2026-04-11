@@ -12,6 +12,7 @@
     --border-style: 1px solid var(--panel-border);
     --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.7);
     --glass-blur: blur(12px);
+    --golden-yellow: rgb(247,216,0);
 }
 
 /* --- GLOBAL STYLES --- */
