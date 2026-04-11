@@ -3,14 +3,14 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Server Info | State of the Dead</title>
+        <title>Server Lore | State of the Dead</title>
         <link
             href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=Roboto:wght@400;700&family=Inter:wght@300;400;600;800&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="assets/css/style.css" />
-        <link rel="stylesheet" href="assets/css/globalstyle.css" />
-        <link rel="stylesheet" href="assets/css/subpages.css" />
+        <link rel="stylesheet" href="../../assets/css/style.css" />
+        <link rel="stylesheet" href="../../assets/css/globalstyle.css" />
+        <link rel="stylesheet" href="../../assets/css/subpages.css" />
     </head>
 
     <body>
@@ -18,7 +18,7 @@
             <div class="navbar">
                 <div class="top-navbar">
                     <div class="top-left">
-                        <a href="index.html">
+                        <a href="../../index.html">
                             <span>STATE OF THE </span
                             ><span id="dead">DEAD</span>
                         </a>
@@ -26,19 +26,14 @@
 
                     <div class="top-right">
                         <div class="server-info">
+                            
                             <div class="info-block">
                                 <p>Server Status</p>
                                 <p id="status">Loading...</p>
                             </div>
                             <div class="players">
-                                <p>
-                                    Online Players
-                                    <strong id="players">Loading...</strong>
-                                </p>
-                                <p>
-                                    Online Peak
-                                    <strong id="peak">Loading...</strong>
-                                </p>
+                                <p>Online Players <strong id="players">Loading...</strong></p>
+                                <p>Online Peak <strong id="peak">Loading...</strong></p>
                             </div>
                         </div>
                     </div>
@@ -51,42 +46,44 @@
                         <div class="menu-item">
                             <button class="menu-button">MAIN MENU</button>
                             <div id="main" class="dropdown">
-                                <a href="index.html">HOME</a>
-                                <a href="supportTIcket.html">SUPPORT TICKET</a>
+                                <a href="../../index.html">HOME</a>
+                                <a href="../../pages/support/supportTicket.html">SUPPORT TICKET</a>
                             </div>
                         </div>
 
                         <div class="menu-item">
                             <button class="menu-button">LORE</button>
                             <div id="lore" class="dropdown">
-                                <a href="lore.html">SERVER LORE</a>
+                                <a href="../../pages/about/lore.html">SERVER LORE</a>
                             </div>
                         </div>
 
                         <div class="menu-item">
                             <button class="menu-button">INFORMATION</button>
                             <div id="info" class="dropdown">
-                                <a href="serverInfo.html">SERVER INFO</a>
-                                <a href="staff.html">STAFF</a>
-                                <a href="starterGuide.html">STARTER GUIDE</a>
-                                <a href="serverRules.html">SERVER RULES</a>
-                                <a href="wiki.html">WIKI</a>
+                                <a href="../../pages/wiki/serverInfo.html">SERVER INFO</a>
+                                <a href="../../pages/about/staff.html">STAFF</a>
+                                <a href="../../pages/wiki/starterGuide.html">STARTER GUIDE</a>
+                                <a href="../../pages/rules/serverRules.html">SERVER RULES</a>
+                                <a href="../../pages/wiki/wiki.html">WIKI</a>
                             </div>
                         </div>
 
                         <div class="menu-item">
                             <button class="menu-button">DONATIONS</button>
                             <div id="donate" class="dropdown">
-                                <a href="donate.html">DONATE</a>
-                                <a href="donationPerks.html">DONATION PERKS</a>
+                                <a href="../../pages/donate/donate.html">DONATE</a>
+                                <a href="../../pages/donate/donationPerks.html">DONATION PERKS</a>
                             </div>
                         </div>
 
                         <div class="menu-item">
-                            <button class="menu-button">PROMOTIONS</button>
+                            <button class="menu-button">
+                                PROMOTIONS
+                            </button>
                             <div id="promote" class="dropdown">
                                 <a href="promote.html">PROMOTE</a>
-                                <a href="promoterPerks.html">PROMOTER PERKS</a>
+                                <a href="../../pages/donate/promoterPerks.html">PROMOTER PERKS</a>
                             </div>
                         </div>
 
@@ -105,43 +102,22 @@
         </header>
 
         <main class="subpage-main">
-            <h1 class="subpage-title">SERVER INFORMATION</h1>
-
-            <div class="info-grid">
-                <div class="info-card">
-                    <span class="icon">🔌</span>
-                    <h4>Server IP</h4>
-                    <p>pz.sotdsurvival.com:2000</p>
+            <h1 class="subpage-title">THE OUTBREAK - SERVER LORE</h1>
+            
+            <div class="lore-timeline">
+                <div class="lore-event">
+                    <h3>Lorem, ipsum dolor.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur nemo esse impedit exercitationem at, voluptas molestias quas, corrupti suscipit ex vel explicabo hic similique, enim consequuntur. Debitis reprehenderit illum ipsam.</p>
                 </div>
-                <div class="info-card">
-                    <span class="icon">🗺️</span>
-                    <h4>Map</h4>
-                    <p>Kentucky (Apocalypse)</p>
+                
+                <div class="lore-event">
+                    <h3>Lorem, ipsum dolor.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus vitae quaerat numquam tempora nemo accusantium quam fugiat officia, in ab iusto dolore. Assumenda quo, at repudiandae nobis vero accusamus recusandae.</p>
                 </div>
-                <div class="info-card">
-                    <span class="icon">🗓️</span>
-                    <h4>Wipe Schedule</h4>
-                    <p>Every 3 Months</p>
-                    <div class="battery">
-                        <div class="level" id="level"></div>
-                    </div>
-
-                    <p id="percentText"></p>
-                </div>
-                <div class="info-card">
-                    <span class="icon">👥</span>
-                    <h4>Faction</h4>
-                    <p>Max 4 Players (Strict)</p>
-                </div>
-                <div class="info-card">
-                    <span class="icon">⛏️</span>
-                    <h4>Resource Multiplier</h4>
-                    <p>0.6x Loot</p>
-                </div>
-                <div class="info-card">
-                    <span class="icon">🌙</span>
-                    <h4>Day/Night Cycle</h4>
-                    <p>2 Hours Day / 45 Mins Dark Night</p>
+                
+                <div class="lore-event">
+                    <h3>Lorem, ipsum dolor.</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quos velit consectetur soluta a. Quia saepe cumque delectus enim, necessitatibus dolores esse quasi, est officiis iusto obcaecati libero ducimus autem!</p>
                 </div>
             </div>
         </main>
@@ -149,6 +125,6 @@
         <footer class="footer">
             <p>© 2026 SOTD Server. All rights reserved.</p>
         </footer>
-        <script src="assets/js/main.js"></script>
+        <script src="../../assets/js/main.js"></script>
     </body>
 </html>

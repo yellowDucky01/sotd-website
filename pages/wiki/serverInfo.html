@@ -3,14 +3,14 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Support Ticket | State of the Dead</title>
+        <title>Server Info | State of the Dead</title>
         <link
             href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;900&family=Roboto:wght@400;700&family=Inter:wght@300;400;600;800&display=swap"
             rel="stylesheet"
         />
-        <link rel="stylesheet" href="assets/css/style.css" />
-        <link rel="stylesheet" href="assets/css/globalstyle.css" />
-        <link rel="stylesheet" href="assets/css/subpages.css" />
+        <link rel="stylesheet" href="../../assets/css/style.css" />
+        <link rel="stylesheet" href="../../assets/css/globalstyle.css" />
+        <link rel="stylesheet" href="../../assets/css/subpages.css" />
     </head>
 
     <body>
@@ -18,7 +18,7 @@
             <div class="navbar">
                 <div class="top-navbar">
                     <div class="top-left">
-                        <a href="index.html">
+                        <a href="../../index.html">
                             <span>STATE OF THE </span
                             ><span id="dead">DEAD</span>
                         </a>
@@ -51,34 +51,34 @@
                         <div class="menu-item">
                             <button class="menu-button">MAIN MENU</button>
                             <div id="main" class="dropdown">
-                                <a href="index.html">HOME</a>
-                                <a href="supportTIcket.html">SUPPORT TICKET</a>
+                                <a href="../../index.html">HOME</a>
+                                <a href="../../pages/support/supportTicket.html">SUPPORT TICKET</a>
                             </div>
                         </div>
 
                         <div class="menu-item">
                             <button class="menu-button">LORE</button>
                             <div id="lore" class="dropdown">
-                                <a href="lore.html">SERVER LORE</a>
+                                <a href="../../pages/about/lore.html">SERVER LORE</a>
                             </div>
                         </div>
 
                         <div class="menu-item">
                             <button class="menu-button">INFORMATION</button>
                             <div id="info" class="dropdown">
-                                <a href="serverInfo.html">SERVER INFO</a>
-                                <a href="staff.html">STAFF</a>
-                                <a href="starterGuide.html">STARTER GUIDE</a>
-                                <a href="serverRules.html">SERVER RULES</a>
-                                <a href="wiki.html">WIKI</a>
+                                <a href="../../pages/wiki/serverInfo.html">SERVER INFO</a>
+                                <a href="../../pages/about/staff.html">STAFF</a>
+                                <a href="../../pages/wiki/starterGuide.html">STARTER GUIDE</a>
+                                <a href="../../pages/rules/serverRules.html">SERVER RULES</a>
+                                <a href="../../pages/wiki/wiki.html">WIKI</a>
                             </div>
                         </div>
 
                         <div class="menu-item">
                             <button class="menu-button">DONATIONS</button>
                             <div id="donate" class="dropdown">
-                                <a href="donate.html">DONATE</a>
-                                <a href="donationPerks.html">DONATION PERKS</a>
+                                <a href="../../pages/donate/donate.html">DONATE</a>
+                                <a href="../../pages/donate/donationPerks.html">DONATION PERKS</a>
                             </div>
                         </div>
 
@@ -86,7 +86,7 @@
                             <button class="menu-button">PROMOTIONS</button>
                             <div id="promote" class="dropdown">
                                 <a href="promote.html">PROMOTE</a>
-                                <a href="promoterPerks.html">PROMOTER PERKS</a>
+                                <a href="../../pages/donate/promoterPerks.html">PROMOTER PERKS</a>
                             </div>
                         </div>
 
@@ -105,63 +105,50 @@
         </header>
 
         <main class="subpage-main">
-            <h1 class="subpage-title">OPEN A TICKET</h1>
+            <h1 class="subpage-title">SERVER INFORMATION</h1>
 
-            <form
-                class="support-form"
-                onsubmit="
-                    event.preventDefault();
-                    alert(
-                        'Ticket System Integration Required. (Simulated Success)',
-                    );
-                "
-            >
-                <div>
-                    <label for="username">In-game Name / Discord ID</label>
-                    <input
-                        type="text"
-                        id="username"
-                        placeholder="PlayerName#1234"
-                        required
-                    />
+            <div class="info-grid">
+                <div class="info-card">
+                    <span class="icon">🔌</span>
+                    <h4>Server IP</h4>
+                    <p>pz.sotdsurvival.com:2000</p>
                 </div>
-
-                <div>
-                    <label for="category">Issue Category</label>
-                    <select id="category" required>
-                        <option value="" disabled selected>
-                            Select an issue...
-                        </option>
-                        <option value="report">
-                            Player Report (Cheating/Toxicity)
-                        </option>
-                        <option value="bug">Report a Bug / Exploit</option>
-                        <option value="purchase">
-                            Donation / VIP Purchase Issue
-                        </option>
-                        <option value="other">Other / General Support</option>
-                    </select>
+                <div class="info-card">
+                    <span class="icon">🗺️</span>
+                    <h4>Map</h4>
+                    <p>Kentucky (Apocalypse)</p>
                 </div>
+                <div class="info-card">
+                    <span class="icon">🗓️</span>
+                    <h4>Wipe Schedule</h4>
+                    <p>Every 3 Months</p>
+                    <div class="battery">
+                        <div class="level" id="level"></div>
+                    </div>
 
-                <div>
-                    <label for="description">Detailed Description</label>
-                    <textarea
-                        id="description"
-                        rows="6"
-                        placeholder="Please provide exactly what happened, coordinates (if necessary), and any evidence links (YouTube/Imgur)..."
-                        required
-                    ></textarea>
+                    <p id="percentText"></p>
                 </div>
-
-                <button type="submit" class="btn-submit">
-                    Submit Support Ticket
-                </button>
-            </form>
+                <div class="info-card">
+                    <span class="icon">👥</span>
+                    <h4>Faction</h4>
+                    <p>Max 4 Players (Strict)</p>
+                </div>
+                <div class="info-card">
+                    <span class="icon">⛏️</span>
+                    <h4>Resource Multiplier</h4>
+                    <p>0.6x Loot</p>
+                </div>
+                <div class="info-card">
+                    <span class="icon">🌙</span>
+                    <h4>Day/Night Cycle</h4>
+                    <p>2 Hours Day / 45 Mins Dark Night</p>
+                </div>
+            </div>
         </main>
 
         <footer class="footer">
             <p>© 2026 SOTD Server. All rights reserved.</p>
         </footer>
-        <script src="assets/js/main.js"></script>
+        <script src="../../assets/js/main.js"></script>
     </body>
 </html>
