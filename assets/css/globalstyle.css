@@ -1,5 +1,5 @@
 /* --- CSS VARIABLES --- */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Outfit:wght@400;700;900&display=swap");
 
 :root {
     --bg-dark: #0a0a0a;
@@ -12,7 +12,7 @@
     --border-style: 1px solid var(--panel-border);
     --glass-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.7);
     --glass-blur: blur(12px);
-    --golden-yellow: rgb(247,216,0);
+    --golden-yellow: rgb(247, 216, 0);
 }
 
 /* --- GLOBAL STYLES --- */
@@ -41,7 +41,8 @@ body::before {
     left: 0;
     width: 200vw;
     height: 100vh;
-    background: url('https://raw.githubusercontent.com/danielstuart14/CSS_FOG_ANIMATION/master/fog1.png') repeat-x;
+    background: url("https://raw.githubusercontent.com/danielstuart14/CSS_FOG_ANIMATION/master/fog1.png")
+        repeat-x;
     background-size: cover;
     opacity: 0.15;
     animation: fog-anim 60s linear infinite;
@@ -50,8 +51,12 @@ body::before {
 }
 
 @keyframes fog-anim {
-    0% { transform: translate3d(0, 0, 0); }
-    100% { transform: translate3d(-100vw, 0, 0); }
+    0% {
+        transform: translate3d(0, 0, 0);
+    }
+    100% {
+        transform: translate3d(-100vw, 0, 0);
+    }
 }
 
 a {
@@ -80,16 +85,20 @@ header {
 
 .top-left a {
     font-size: 1.8rem;
-    font-family: 'Outfit', sans-serif;
+    font-family: "Outfit", sans-serif;
     font-weight: 900;
     color: white;
-    text-shadow: 0 0 15px rgba(255, 0, 0, 0.6), 3px 3px 0px #000;
+    text-shadow:
+        0 0 15px rgba(255, 0, 0, 0.6),
+        3px 3px 0px #000;
     letter-spacing: 3px;
     transition: text-shadow 0.3s ease;
 }
 
 .top-left a:hover {
-    text-shadow: 0 0 25px rgba(255, 0, 0, 1), 3px 3px 0px #000;
+    text-shadow:
+        0 0 25px rgba(255, 0, 0, 1),
+        3px 3px 0px #000;
 }
 
 .top-left #dead {
@@ -120,7 +129,8 @@ header {
     text-align: center;
 }
 
-.info-block p:first-child, .players p {
+.info-block p:first-child,
+.players p {
     font-size: 0.6rem;
     color: var(--text-gray);
     text-transform: uppercase;
@@ -160,7 +170,7 @@ header {
 
 .menu-item {
     position: relative;
-    font-family: 'Inter', sans-serif;
+    font-family: "Inter", sans-serif;
 }
 
 .menu-button {
@@ -179,7 +189,7 @@ header {
 }
 
 .menu-button::after {
-    content: '';
+    content: "";
     position: absolute;
     bottom: -2px;
     left: 50%;
@@ -195,7 +205,8 @@ header {
     width: 100%;
 }
 
-.menu-button:hover, .menu-item:hover .menu-button {
+.menu-button:hover,
+.menu-item:hover .menu-button {
     color: #fff;
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.4);
 }
@@ -258,13 +269,20 @@ header {
     left: 0;
     width: 100%;
     padding: 15px 0;
-    text-align: center;
     background-color: rgba(5, 5, 5, 0.95);
     border-top: var(--border-style);
     font-size: 0.8rem;
     color: var(--text-gray);
     letter-spacing: 1px;
     z-index: 10;
+}
+
+.footer-container {
+    width: 70%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 @media (max-width: 768px) {
